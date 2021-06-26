@@ -29,11 +29,11 @@ publishing {
         maven {
             name = "GitHubPackages"
             credentials {
-                username = githubProperties.get("gpr.usr") as String? ?: System.getenv("GPR_USER")
-                password = githubProperties.get("gpr.key") as String? ?: System.getenv("GPR_API_KEY")
+                username = githubProperties["gpr.usr"] as String? ?: System.getenv("GPR_USER")
+                password = githubProperties["gpr.key"] as String? ?: System.getenv("GPR_API_KEY")
 
             }
-            url = uri(githubProperties.get("gpr.url") as String? ?: System.getenv("GPR_URL"))
+            url = uri(githubProperties["gpr.url"] as String? ?: System.getenv("GPR_URL"))
         }
     }
 }
