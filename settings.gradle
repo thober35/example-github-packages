@@ -1,0 +1,3 @@
+include ':exampleLibrary'
+include ':app'
+rootProject.name = "example-github-packages"
